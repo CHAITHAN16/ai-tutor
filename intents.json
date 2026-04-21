@@ -1,0 +1,211 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "hey there", "good morning", "good evening", "hello bot", "can you help me"],
+      "responses": [
+        "Hello! Ask me any Python question and I will explain it clearly with examples.",
+        "Hi! I can help with Python basics, Flask, data structures, and PyTorch.",
+        "Hey! Try something like `what is a list in Python` or `how do functions work`."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "see you later", "farewell", "talk to you later", "bye bot", "catch you later"],
+      "responses": [
+        "Goodbye! Come back anytime you want more Python help.",
+        "See you later! Keep practicing small examples and Python will feel much easier.",
+        "Take care! I will be here when you want to learn another topic."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thank you so much", "thanks a lot", "appreciate it", "that helped", "many thanks", "thanks bot"],
+      "responses": [
+        "You are welcome! Feel free to ask the next Python question.",
+        "Happy to help. I can also explain the same concept with another example if you want.",
+        "Anytime. Python gets easier when you practice one focused concept at a time."
+      ]
+    },
+    {
+      "tag": "python_intro",
+      "patterns": ["what is python", "explain python", "tell me about python", "python basics", "python language", "why use python", "python introduction", "what is python used for"],
+      "responses": [
+        "Python is a general-purpose programming language known for readable syntax and fast development. Example:\nmessage = 'Hello, Python'\nprint(message)",
+        "Python is used for web development, automation, data analysis, AI, and scripting. Example:\nfor n in [1, 2, 3]:\n    print(n)",
+        "A beginner-friendly way to see Python is this: it lets you express ideas with simple syntax while still being powerful enough for serious projects. Example:\nname = 'Ava'\nprint(f'Hello {name}')"
+      ]
+    },
+    {
+      "tag": "variables",
+      "patterns": ["what is a variable", "variables in python", "explain variables", "how to store values in python", "variable example", "python assignment", "assign value in python", "define variable"],
+      "responses": [
+        "A variable stores a value under a name so you can reuse it later. Example:\nname = 'Ada'\nage = 20\nprint(name, age)",
+        "In Python, you create a variable with assignment using `=`. Example:\nprice = 99.5\nis_paid = False",
+        "Variables make code flexible because you can change the value without rewriting every use. Example:\ncount = 1\ncount = count + 1"
+      ]
+    },
+    {
+      "tag": "data_types",
+      "patterns": ["python data types", "what are data types", "types in python", "int float str bool", "basic data types", "common python types", "explain python types", "data type example"],
+      "responses": [
+        "Common Python data types are `int`, `float`, `str`, `bool`, and `None`. Example:\nage = 21\nprice = 9.99\nname = 'Ana'\nis_ready = True",
+        "A data type tells Python what kind of value it is working with. Example:\nprint(type(5))\nprint(type('hello'))",
+        "Python also has collection types like lists, tuples, sets, and dictionaries. Example:\nitems = [1, 2]\npoint = (3, 4)\nflags = {'x', 'y'}"
+      ]
+    },
+    {
+      "tag": "strings",
+      "patterns": ["what is a string", "strings in python", "string example", "text in python", "explain string methods", "split string", "join string", "string operations"],
+      "responses": [
+        "A string is text written in quotes. Example:\nname = 'Python'\nprint(name.upper())",
+        "Strings are immutable, so methods return a new string instead of changing the original. Example:\ntext = ' hello '\nprint(text.strip())",
+        "Useful string methods include `lower()`, `upper()`, `split()`, and `replace()`. Example:\nmessage = 'one,two'\nprint(message.split(','))"
+      ]
+    },
+    {
+      "tag": "lists_intro",
+      "patterns": ["what is a list", "lists in python", "list example", "explain python list", "ordered collection in python", "append to list", "list methods", "how do lists work"],
+      "responses": [
+        "A list is an ordered, mutable collection. Example:\nitems = [1, 2, 3]\nitems.append(4)\nprint(items)",
+        "Use a list when order matters and you may need to add, remove, or update items. Example:\ncolors = ['red', 'blue']\nprint(colors[0])",
+        "Lists support indexing, slicing, and methods like `append`, `remove`, and `sort`. Example:\nnums = [3, 1, 2]\nnums.sort()\nprint(nums)"
+      ]
+    },
+    {
+      "tag": "tuples_intro",
+      "patterns": ["what is a tuple", "tuples in python", "tuple example", "tuple vs list", "immutable collection python", "explain tuple", "how tuple works", "tuple usage"],
+      "responses": [
+        "A tuple is an ordered collection like a list, but it is immutable. Example:\npoint = (10, 20)\nprint(point[0])",
+        "Use a tuple when the data should stay fixed, such as coordinates or configuration values. Example:\nrgb = (255, 128, 0)",
+        "Tuples are also useful for unpacking values. Example:\nname, age = ('Lia', 22)\nprint(name, age)"
+      ]
+    },
+    {
+      "tag": "sets_intro",
+      "patterns": ["what is a set", "sets in python", "set example", "unique values python", "set operations", "union intersection", "remove duplicates python", "explain set"],
+      "responses": [
+        "A set stores unique values in an unordered collection. Example:\nnums = {1, 2, 2, 3}\nprint(nums)",
+        "Sets are useful for removing duplicates and checking membership quickly. Example:\nletters = set(['a', 'b', 'a'])\nprint(letters)",
+        "You can do set math like union and intersection. Example:\na = {1, 2, 3}\nb = {3, 4}\nprint(a | b)\nprint(a & b)"
+      ]
+    },
+    {
+      "tag": "dictionaries_intro",
+      "patterns": ["what is a dictionary", "dictionaries in python", "dict example", "key value pair python", "dictionary methods", "how dict works", "python mapping", "explain dictionary"],
+      "responses": [
+        "A dictionary stores data as key-value pairs. Example:\nstudent = {'name': 'Lia', 'age': 21}\nprint(student['name'])",
+        "Use a dictionary when values have labels instead of positions. Example:\nconfig = {'debug': True, 'port': 5000}",
+        "Helpful dictionary methods include `get`, `keys`, `values`, and `items`. Example:\ndata = {'a': 1}\nprint(data.get('a'))"
+      ]
+    },
+    {
+      "tag": "conditionals",
+      "patterns": ["if else in python", "conditional statements", "how if works", "elif example", "decision making python", "python if statement", "if elif else", "condition example"],
+      "responses": [
+        "Conditionals let Python choose what code to run. Example:\nscore = 82\nif score >= 50:\n    print('Pass')\nelse:\n    print('Fail')",
+        "Use `if`, `elif`, and `else` when your program needs decisions. Example:\nvalue = 5\nif value > 10:\n    print('big')\nelif value > 0:\n    print('small')",
+        "A condition must evaluate to `True` or `False`. Example:\nage = 18\nprint(age >= 18)"
+      ]
+    },
+    {
+      "tag": "for_loop",
+      "patterns": ["for loop in python", "what is for loop", "iterate in python", "for loop example", "loop through list", "range loop", "python iteration", "explain for loop"],
+      "responses": [
+        "A `for` loop repeats code for each item in a sequence. Example:\nfor item in ['a', 'b', 'c']:\n    print(item)",
+        "Use `for` when you already know the sequence or range you want to process. Example:\nfor i in range(3):\n    print(i)",
+        "For loops are common with lists, strings, tuples, and dictionaries. Example:\nfor key, value in {'x': 1, 'y': 2}.items():\n    print(key, value)"
+      ]
+    },
+    {
+      "tag": "while_loop",
+      "patterns": ["while loop in python", "what is while loop", "while example", "repeat until condition", "python while statement", "loop with condition", "explain while loop", "while syntax"],
+      "responses": [
+        "A `while` loop repeats as long as its condition is true. Example:\ncount = 0\nwhile count < 3:\n    print(count)\n    count += 1",
+        "Use a `while` loop when repetition depends on a changing condition rather than a fixed sequence. Example:\npassword = ''\nwhile password != 'python':\n    password = input('Password: ')",
+        "Always update the condition inside the loop when needed, or you may create an infinite loop. Example:\nnumber = 5\nwhile number > 0:\n    number -= 1"
+      ]
+    },
+    {
+      "tag": "functions_intro",
+      "patterns": ["what is a function", "functions in python", "function example", "def keyword python", "return value", "parameters and arguments", "how to make a function", "explain function"],
+      "responses": [
+        "A function is a reusable block of code defined with `def`. Example:\ndef greet(name):\n    return f'Hello, {name}'\nprint(greet('Sam'))",
+        "Functions help you avoid repetition and keep code organized. Example:\ndef square(x):\n    return x * x",
+        "A function can take parameters and return a result. Example:\ndef add(a, b):\n    return a + b\nprint(add(2, 3))"
+      ]
+    },
+    {
+      "tag": "oop",
+      "patterns": ["what is oop", "classes in python", "object oriented programming", "class example", "object example", "self keyword", "init method", "python class"],
+      "responses": [
+        "OOP stands for object-oriented programming. It uses classes to define blueprints and objects as instances. Example:\nclass Dog:\n    def __init__(self, name):\n        self.name = name",
+        "A class groups related data and behavior together. Example:\nclass Dog:\n    def bark(self):\n        return 'woof'\ndog = Dog()\nprint(dog.bark())",
+        "The `self` parameter refers to the current object, and `__init__` is used to set initial values. Example:\nclass User:\n    def __init__(self, name):\n        self.name = name"
+      ]
+    },
+    {
+      "tag": "inheritance",
+      "patterns": ["what is inheritance", "inheritance in python", "parent class child class", "super keyword", "inheritance example", "extend class python", "oop inheritance", "method overriding"],
+      "responses": [
+        "Inheritance lets one class reuse and extend another class. Example:\nclass Animal:\n    def speak(self):\n        print('sound')\nclass Dog(Animal):\n    pass",
+        "A child class gets behavior from the parent class and can add more. Example:\ndog = Dog()\ndog.speak()",
+        "Use `super()` when you want to call parent logic from a child class. Example:\nclass Child(Parent):\n    def __init__(self):\n        super().__init__()"
+      ]
+    },
+    {
+      "tag": "exceptions_intro",
+      "patterns": ["what is exception", "exceptions in python", "try except finally", "error handling python", "raise error", "handle errors", "python exception example", "runtime error python"],
+      "responses": [
+        "Exceptions are runtime errors that Python can catch and handle. Example:\ntry:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+        "Use `try` for risky code and `except` to respond to specific problems. Example:\ntry:\n    value = int('abc')\nexcept ValueError:\n    print('Invalid number')",
+        "You can use `finally` for cleanup and `raise` to create your own errors. Example:\nif age < 0:\n    raise ValueError('Age cannot be negative')"
+      ]
+    },
+    {
+      "tag": "file_handling",
+      "patterns": ["file handling in python", "read file python", "write file python", "with open example", "open file", "file methods python", "save text to file", "load file content"],
+      "responses": [
+        "File handling lets your program read from and write to files. Example:\nwith open('notes.txt', 'r', encoding='utf-8') as file:\n    text = file.read()",
+        "Use `with open(...)` because it closes the file automatically. Example:\nwith open('log.txt', 'a') as file:\n    file.write('Started\\n')",
+        "Common modes are `'r'` for reading, `'w'` for writing, and `'a'` for appending. Example:\nwith open('output.txt', 'w') as file:\n    file.write('Hello')"
+      ]
+    },
+    {
+      "tag": "flask_intro",
+      "patterns": ["what is flask", "flask in python", "flask framework", "flask route example", "jinja template", "jsonify flask", "request in flask", "build api with flask"],
+      "responses": [
+        "Flask is a lightweight Python web framework for websites and APIs. Example:\nfrom flask import Flask\napp = Flask(__name__)",
+        "A Flask route connects a URL to a Python function. Example:\n@app.route('/')\ndef home():\n    return 'Hello, Flask!'",
+        "Flask also supports templates and JSON APIs. Example:\nfrom flask import jsonify\n@app.route('/api/data')\ndef data():\n    return jsonify({'status': 'ok'})"
+      ]
+    },
+    {
+      "tag": "numpy_intro",
+      "patterns": ["what is numpy", "numpy in python", "numpy array example", "broadcasting numpy", "ndarray", "numerical computing python", "numpy basics", "explain numpy"],
+      "responses": [
+        "NumPy is a library for fast numerical computing with arrays. Example:\nimport numpy as np\narr = np.array([1, 2, 3])\nprint(arr)",
+        "NumPy arrays are more efficient than plain lists for many numeric tasks. Example:\narr = np.array([1, 2, 3])\nprint(arr + 10)",
+        "Broadcasting lets NumPy apply operations across arrays without manual loops. Example:\nmatrix = np.array([[1], [2]])\nprint(matrix + np.array([10, 20]))"
+      ]
+    },
+    {
+      "tag": "pandas_intro",
+      "patterns": ["what is pandas", "pandas in python", "dataframe example", "read csv with pandas", "clean data pandas", "pandas basics", "select rows and columns", "explain dataframe"],
+      "responses": [
+        "pandas is a library for working with table-like data using DataFrames. Example:\nimport pandas as pd\ndf = pd.DataFrame({'name': ['Ana', 'Ben'], 'age': [20, 21]})",
+        "It is useful for cleaning, filtering, grouping, and analyzing structured data. Example:\nprint(df.head())",
+        "You can load files such as CSV data directly into a DataFrame. Example:\ndata = pd.read_csv('people.csv')\nprint(data.columns)"
+      ]
+    },
+    {
+      "tag": "pytorch_intro",
+      "patterns": ["what is pytorch", "pytorch in python", "tensor example", "nn module pytorch", "train model pytorch", "deep learning pytorch", "pytorch basics", "neural network in pytorch"],
+      "responses": [
+        "PyTorch is a deep learning library used for tensors, neural networks, and model training. Example:\nimport torch\nx = torch.tensor([1.0, 2.0, 3.0])\nprint(x)",
+        "A tensor is PyTorch's core data structure, similar to a multidimensional array. Example:\nprint(x.shape)",
+        "PyTorch models often use `torch.nn` layers and a training loop. Example:\nimport torch.nn as nn\nlayer = nn.Linear(2, 1)"
+      ]
+    }
+  ]
+}

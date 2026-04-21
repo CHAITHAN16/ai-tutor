@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI';
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+/* LANDING */
+.landing {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left h1 {
+  font-size: 3rem;
+  background: linear-gradient(45deg, orange, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.left button {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, orange, purple);
+  color: white;
+}
+
+.right {
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+/* APP */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 20px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, orange, purple);
+  color: white;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.menu-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.menu-btn.active {
+  background: linear-gradient(45deg, orange, purple);
+}
+
+/* IDEAS */
+.ideas li {
+  padding: 6px;
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* CHAT */
+#messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* MESSAGE */
+.message {
+  margin: 10px 0;
+}
+
+.user {
+  text-align: right;
+}
+
+.bubble {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 15px;
+  max-width: 65%;
+  line-height: 1.6;
+}
+
+.user .bubble {
+  background: linear-gradient(45deg, orange, purple);
+}
+
+.bot .bubble {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* INPUT */
+.input-box {
+  display: flex;
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.input-box button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, orange, purple);
+  color: white;
+}

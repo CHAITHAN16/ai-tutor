@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AI Tutor</title>
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.94/build/spline-viewer.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <!-- 🔥 LANDING -->
+  <div id="landing" class="landing">
+    <div class="left">
+      <h1>AI Tutor</h1>
+      <p>Learn Python with AI</p>
+      <button onclick="startApp()">Get Started 🚀</button>
+    </div>
+
+    <div class="right">
+      <spline-viewer url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"></spline-viewer>
+    </div>
+  </div>
+
+  <!-- 💬 APP -->
+  <div id="app" class="app hidden">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>PY Tutor</h2>
+
+      <button onclick="newChat()">+ New Chat</button>
+
+      <!-- MENU -->
+      <div class="menu">
+        <button class="menu-btn active" onclick="showChat()">Chat</button>
+        <button class="menu-btn" onclick="showIdeas()">Ideas</button>
+      </div>
+
+      <!-- IDEAS -->
+      <div id="ideas-panel" class="ideas hidden">
+        <p>💡 Try:</p>
+        <ul>
+          <li onclick="quickAsk('What is Python?')">What is Python?</li>
+          <li onclick="quickAsk('Explain loops')">Loops</li>
+          <li onclick="quickAsk('Explain OOP')">OOP</li>
+          <li onclick="quickAsk('Explain Flask')">Flask</li>
+        </ul>
+      </div>
+
+      <!-- HISTORY -->
+      <h4>History</h4>
+      <ul id="history"></ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div id="messages"></div>
+
+      <div class="input-box">
+        <input id="input" placeholder="Ask something...">
+        <button onclick="sendMessage()">Send</button>
+        <button id="stop" onclick="stopTyping()">Stop</button>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
